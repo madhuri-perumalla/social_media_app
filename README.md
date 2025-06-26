@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# SnapTalk
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SnapTalk is a modern social media platform built with the MERN (MongoDB, Express.js, React.js, Node.js) stack. It combines the features of real-time chat messaging with social media functionalities like posts, stories, and user profiles.
 
-## Available Scripts
+![SnapTalk Logo](./client/src/images/SnapTalk.png)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**
+  - Register and Login functionality
+  - Protected routes for authenticated users
+  - Firebase integration for enhanced security
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Social Media Features**
+  - Create and share posts
+  - Upload and view stories
+  - Like and interact with posts
+  - User profiles
+  - Search functionality
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Real-time Chat**
+  - One-on-one messaging
+  - Real-time message updates using Socket.IO
+  - User search for starting new conversations
+  - Message input with text support
 
-### `npm test`
+- **Modern UI/UX**
+  - Responsive design
+  - Clean and intuitive interface
+  - Seamless navigation
+  - Landing page for new users
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+### Frontend
+- React.js
+- Context API for state management
+- Socket.IO Client for real-time communication
+- Firebase for additional features
+- CSS for styling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+- Node.js
+- Express.js
+- MongoDB (with Mongoose)
+- Socket.IO for real-time features
+- JWT for authentication
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+SnapTalk/
+├── client/              # Frontend React application
+│   ├── src/
+│   │   ├── components/  # React components
+│   │   ├── context/     # Context providers
+│   │   ├── pages/       # Main page components
+│   │   └── styles/      # CSS styling files
+│   └── public/          # Static files
+└── server/              # Backend Node.js application
+    ├── controllers/     # Route controllers
+    ├── models/          # MongoDB models
+    ├── routes/          # API routes
+    └── middleware/      # Custom middleware
+```
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB
+- npm or yarn
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository
+```bash
+git clone https://github.com/madhuri-perumalla/social_media_app.git
+cd SnapTalk
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install backend dependencies
+```bash
+cd server
+npm install
+```
 
-## Learn More
+3. Install frontend dependencies
+```bash
+cd ../client
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Create a `.env` file in the server directory with the following variables:
+```
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=6001
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Create a `.env` file in the client directory with your Firebase configuration:
+```
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_firebase_app_id
+```
 
-### Code Splitting
+### Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Start the backend server
+```bash
+cd server
+npm start
+```
 
-### Analyzing the Bundle Size
+2. Start the frontend application in a new terminal
+```bash
+cd client
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application should now be running on `http://localhost:3000`
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
+- Thanks to all contributors who have helped shape SnapTalk
+- Special thanks to the MERN stack smart internz community for their excellent documentation and resources 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
