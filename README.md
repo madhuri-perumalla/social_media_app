@@ -63,7 +63,10 @@ SnapTalk/
     ├── routes/          # API routes
     └── middleware/      # Custom middleware
 ```
+## Phasewisedocumentation Link
+https://drive.google.com/drive/folders/1F8ctqLBz6PnENJKZrhZ7yrj7sMeARZu-
 
+ 
 ## Getting Started
 
 ### Prerequisites
